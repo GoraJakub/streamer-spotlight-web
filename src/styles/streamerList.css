@@ -1,0 +1,35 @@
+.streamers__list__wrapper {
+    width: 100%;
+    max-width: 700px;
+}
+.streamers__list__wrapper h2 {
+    margin-left: 15px;
+}
+
+.streamers__list__item {
+    padding: 15px;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.streamers__list__item img{
+    object-fit: contain;
+}
+.streamers__info__wrapper {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.streamers__info__votes {
+    margin-top: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 701px) {
+    .streamers__list__item {
+        border-radius: 8px;
+        /* border: 1px solid #b3b3b3; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}

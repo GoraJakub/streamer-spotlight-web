@@ -1,0 +1,80 @@
+.streamer__upload__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.streamer__upload__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    padding: 15px;
+    border-bottom: 1px solid #b3b3b3;
+    margin-bottom: 50px;
+    max-width: 700px;
+}
+
+.streamer__upload__form__title {
+    margin-bottom: 15px;
+    display: block;
+    flex: 0 0 100%;
+}
+
+.streamer__upload__input__group {
+    position: relative;
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+}
+
+.streamer__upload__input__group input,
+.streamer__upload__input__group textarea {
+    background-color: white;
+    min-height: 50px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    color: #1f1f1fde;
+    padding: 5px;
+}
+.streamer__upload__input__group textarea {
+    padding-top: 20px;
+}
+.streamer__upload__input__group input:focus,
+.streamer__upload__input__group textarea:focus {
+    outline: none !important;
+    border-color: #646cff;
+}
+
+.streamer__upload__input__group label {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    transition: all 0.3s;
+    background-color: white;
+    padding: 5px;
+}
+.streamer__upload__input__group textarea:focus + label,
+.streamer__upload__input__group input:focus + label,
+.streamer__upload__input__group input:not([value=""]) + label,
+.streamer__upload__input__group textarea.not-empty + label{
+    top: -15px;
+    font-size: 1rem;
+}
+
+
+
+.streamer__upload__input__group.--description textarea{
+    resize: none;
+}
+
+.streamer__upload__form__submit {
+    justify-self: end;
+}
+
+@media (min-width: 701px) {
+    .streamer__upload__form {
+        border: 0;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}

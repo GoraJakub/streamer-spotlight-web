@@ -1,0 +1,38 @@
+.streamer__details__wrapper {
+    display: flex;
+    max-width: 700px;
+    width: 100%;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.streamers__avatar {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+.streamers__info__wrapper {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.streamers__info__votes {
+    display: flex;
+    align-items: center;
+}
+
+.streamers__info__votes button {
+    margin-left: 5px;
+}
+
+.streamers__buttons__section {
+    flex: 0 0 100%;
+    display: flex;
+    margin-top: 15px;
+}
+
+@media (min-width: 701px) {
+    .streamer__details__wrapper {
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    }
+}

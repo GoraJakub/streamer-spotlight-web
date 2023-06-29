@@ -1,0 +1,11 @@
+header {
+    padding: 15px;
+    background-color: #242424;
+    display: flex;
+    width: 100vw;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
