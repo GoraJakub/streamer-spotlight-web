@@ -7,6 +7,7 @@ import { useEffect } from "react"
 import { io } from "socket.io-client"
 import { AVATAR_LINK } from "../constants/constants"
 import "../styles/streamerDetails.css"
+import { isVoted } from "../utils/isVoted"
 
 const StreamerDetailsPage = () => {
     const {streamerId} = useParams()
@@ -56,7 +57,9 @@ const StreamerDetailsPage = () => {
                         <button>Back</button>
                     </Link>
                     <p className="streamers__info__votes">
-                        Votes: {streamerData.votes} <button onClick={voteForStreamer}>Vote!</button>
+                        Votes: {streamerData.votes} <button onClick={voteForStreamer} className={isVoted(streamerId) ? 'disabled' : ''}>
+                            {isVoted(streamerId) ? 'Voted' : 'Vote!'}
+                            </button>
                     </p>
                 </div>
             </section>

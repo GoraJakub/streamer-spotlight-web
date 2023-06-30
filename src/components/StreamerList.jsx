@@ -7,6 +7,8 @@ import io from "socket.io-client";
 import { AVATAR_LINK } from "../constants/constants";
 import { Link } from "react-router-dom";
 import "../styles/streamerList.css"
+import { saveToLocalStorage } from "../utils/saveToLocalStorage";
+import { isVoted } from "../utils/isVoted";
 
 
 const StreamerList = () => {
@@ -22,6 +24,7 @@ const StreamerList = () => {
     })
 
     const voteForStreamer = (id) => {
+        saveToLocalStorage(id)
         voteForStreamerMutation.mutate(id)
     }
 
@@ -54,7 +57,7 @@ const StreamerList = () => {
                             </p>
                             <p className="streamers__info__streaming_platform">Main streaming platform: {streamer.streamingPlatform}</p>
                             <p className="streamers__info__votes">
-                                Votes: {streamer.votes} <button onClick={()=>voteForStreamer(streamer._id)}>Vote!</button>
+                                Votes: {streamer.votes} <button onClick={()=>voteForStreamer(streamer._id)} className={isVoted(streamer._id) ? 'disabled' : ''}>{isVoted(streamer._id) ? 'Voted' : 'Vote!'}</button>
                             </p>
                         </div>
                         
